@@ -5,18 +5,6 @@
 #define RSNN_IMPLEMENTATION
 #include "RSNN.h"
 
-uint32_t P = 2147483647;
-uint32_t A = 16807;
-uint32_t current = 1;
-
-double Rand() {
-    current = current * A % P;
-    double result = (double)current / P;
-    return result;
-}
-
-const int ITERS = 4000;
-
 void drawCircleLine(RSGL_point p) {
     size_t y, i;
     for (y = 0; y < 3; y++) {
